@@ -20,11 +20,10 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const { toggleSidebar } = useSidebar();
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
       {/* left */}
-      <Button variant="outline" onClick={toggleSidebar}>
-        Custom Button
-      </Button>
+      <SidebarTrigger />
+      {/* <Button variant="outline" onClick={toggleSidebar}>Custom button</Button> */}
       {/* Right */}
       <div className="flex items-center gap-4">
         <Link href="/">Dashboard</Link>
@@ -53,17 +52,19 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
-              <AvatarImage src="https://avatars.github.com/shadcn.png" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/149504962?v=4" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent sideOffset={10}>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <User className="h-[1.2rem] w-[1.2rem] mr-2 " />
-              Profile
-            </DropdownMenuItem>
+            <Link href="/users/Next">
+              <DropdownMenuItem>
+                <User className="h-[1.2rem] w-[1.2rem] mr-2 " />
+                Profile
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuItem>
               <Settings className="h-[1.2rem] w-[1.2rem] mr-2 " /> Settigns
             </DropdownMenuItem>
