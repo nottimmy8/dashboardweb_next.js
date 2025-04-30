@@ -20,7 +20,7 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--chart-3)",
   },
   mobile: {
     label: "Mobile",

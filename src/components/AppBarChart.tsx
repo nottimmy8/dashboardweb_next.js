@@ -13,11 +13,11 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--chart-3)",
   },
   mobile: {
     label: "Mobile",
-    color: " var(--chart-4)",
+    color: " var(--chart-2)",
   },
 } satisfies ChartConfig;
 

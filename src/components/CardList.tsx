@@ -94,7 +94,7 @@ const list = title === "Popular COntent" ? popularcontent : latestTransactions;
 const CardList = ({ title }: { title: string }) => {
   return (
     <div className="w-full">
-      <h1 className="text-lg font-medium mb-6  ">{title}</h1>
+      <h1 className="text-lg font-medium mb-3   ">{title}</h1>
       <div className="flex flex-col gap-2">
         {list.map((item) => (
           <Card
@@ -111,7 +111,9 @@ const CardList = ({ title }: { title: string }) => {
             </div>
             <CardContent className=" flex-1  p-0 ">
               <CardTitle className="text-sm font-medium">
-                {item.title}{" "}
+                {item.title.length > 12
+                  ? `${item.title.slice(0, 12)}...`
+                  : item.title}
               </CardTitle>
               <Badge variant="secondary">{item.badge} </Badge>
             </CardContent>

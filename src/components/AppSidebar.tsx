@@ -1,7 +1,9 @@
 import {
+  Activity,
   Calendar,
   ChevronDown,
   ChevronUp,
+  HandCoins,
   Home,
   Inbox,
   LucideGitCommitHorizontal,
@@ -54,14 +56,19 @@ const items = [
     icon: Inbox,
   },
   {
+    title: "Charts",
+    url: "#",
+    icon: Activity,
+  },
+  {
     title: "Calendar",
     url: "#",
     icon: Calendar,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Payment",
+    url: "/payments",
+    icon: HandCoins,
   },
   {
     title: "Settings",
